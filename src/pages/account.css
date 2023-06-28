@@ -1,0 +1,100 @@
+.loginContainer, .registerContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.loginLeft, .registerLeft {
+    background: url('https://images.unsplash.com/photo-1570209889645-acdc20ae09d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+    background-size: cover;
+    background-position: center;
+    flex: 1.1
+}
+
+.registerLeft {
+    background: url('https://images.unsplash.com/photo-1454486837617-ce8e1ba5ebfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.loginRight, .registerRight {
+    flex: 1;
+    box-shadow: 2px 2px 8px 2px;
+    background-color: rgb(245, 240, 240);
+}
+
+.loginRight form, .registerRight form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.loginRight form input, .registerRight form input {
+    text-align: center;
+}
+
+.loginRight form h1, .registerRight form h1 {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.loginRight form p, .registerRight form p {
+    margin-bottom: 5px;
+    /* font-size: 1em; */
+}
+
+.loginRight input, .registerRight input {
+    margin-bottom: 20px;
+}
+
+.loginRight form button, .registerRight form button {
+    background-color: rgb(65, 153, 224);
+    color: white;
+    width: 300px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.loginRight form button:hover, .registerRight form button:hover {
+    background-color: rgb(125, 175, 215);
+}
+
+.loginInput, .registerInput {
+    border: 1.5px solid grey;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.loginSignupTxt, .registerSignupTxt {
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+.signUp {
+    color: rgb(38, 111, 170);
+}
+
+.signUp {
+    display: inline;
+}
+
+@media screen and (max-width: 800px) { 
+    .registerContainer, .loginContainer {
+        flex-direction: column;
+    }
+    .loginLeft {
+        flex: 1
+    }
+    .loginInput, .registerInput {
+        width: 95%;
+    }
+    .loginRight form button, .registerRight form button {
+        width: 95%;
+    }
+}

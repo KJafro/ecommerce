@@ -1,0 +1,171 @@
+.sizeDiv {
+    display: flex;
+}
+
+.singleDiv {
+    display: flex;
+    height: 95vh;
+    background-color: rgb(237, 234, 234);
+}
+
+button {
+    cursor: pointer;
+}
+
+.singleDesc {
+    max-width: 600px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.singleImgPic {
+    height: 40%;
+    width: 30%;
+}
+
+.singleWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.singleStuff {
+    display: flex;
+}
+
+.singleInfo h3, .singleInfo h4 {
+    text-align: center;
+}
+
+.singleInfo h3 {
+    /* width: 300px; */
+}
+
+.singleInfo button {
+    height: 40px;
+    width: 330px;
+    margin-top: 10px;
+    margin-left: 14px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 0.5px solid grey;
+    background-color: green;
+    color: white;
+}
+
+.singleInfo button:hover {
+    background-color: rgb(67, 156, 67);
+}
+
+
+.errorP {
+    margin-top: 10px;
+    color: red;
+}
+
+.singleSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleOrderMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(208, 214, 220);
+    background-color: rgb(190, 197, 205);
+}
+
+.singleOrderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.singleOrderWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.singleOrderDetails {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.singleOrderImage {
+    height: 100px;
+    width: 100px;
+}
+
+.singleOrderzzz {
+    width: 50%;
+    text-align: center;
+    /* border: 2px solid grey; */
+    border-radius: 4px;
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.singleItemPageSpinner {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 880px) {
+    .singleOrderImage {
+        height: 70px;
+        width: 70px;
+    }
+    .singleOrderzzz {
+        width: 50%;
+    }
+    .singleWrapper {
+        flex-direction: column;
+    }
+    .singleImgPic {
+        /* height: 400px; */
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .singleOrderzzz {
+        width: 80%;
+    }
+    .singleImgPic {
+        /* height: 100%; */
+        width: 100%;
+    }
+    .singleInfo button {
+        width: 90%;
+        margin-top: 20px;
+        margin-right: 25px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .singleDiv {
+        height: auto;
+    }
+}

@@ -1,0 +1,641 @@
+.leftHeader, .rightHeader {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 15px;
+    background-color: white;
+    /* box-shadow: 2px 2px 10px 2px red; */
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    /* height: 6vh; */
+    background-color: white;
+    font-size: 0.9em;
+    /* border-bottom: 1px solid grey; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.leftHeader {
+    margin-left: 120px;
+}
+
+.rightHeader {
+    background-color: rgb(255, 255, 255);
+}
+
+.rightHeader p {
+    position: relative;
+    top: 3px;
+    right: 33px;
+    color: red;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+ul:hover {
+    color: rgb(32, 120, 222);
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.itemImage {
+    height: 160px;
+}
+
+.itemImageLink { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemImage:hover{
+    transform: rotate(-5deg);
+    transition: 0.5s ease-in;
+}
+
+.radio-1, .radio-2, .radio-3, .radio-4, .radio-5, .radio-6, .radio-7, .radio-8 {
+    visibility: hidden;
+}
+
+.sortDiv input {
+    visibility: hidden;
+}
+
+.sortDiv label {
+    cursor: pointer;
+}
+
+.sortDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 11px;
+}
+
+.sortDiv select {
+    padding: 4px;
+    border-radius: 3px;
+    border: 0.5px solid grey;
+    background-color: white;
+    width: 195px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.label-1, .label-2, .label-3, .label-4, .label-6, .label-7, .label-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    opacity: 0.5;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 70px;
+    width: 200px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 10px;
+}
+
+.label-6, .label-7, .label-8 {
+    flex-direction: row;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 0;
+    
+}
+
+.label-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -15px;
+    margin-right: 20px;
+}
+
+label:hover {
+    opacity: 0.3;
+}
+
+.label-asc, .label-des {
+    opacity: 0.5;
+}
+
+.radio-1:checked ~ .label-1,
+.radio-2:checked ~ .label-2,
+.radio-3:checked ~ .label-3,
+.radio-4:checked ~ .label-4,
+.radio-5:checked ~ .label-5,
+.radio-6:checked ~ .label-6,
+.radio-7:checked ~ .label-7,
+.radio-8:checked ~ .label-8
+ {
+    transition: 0.5s ease-in;
+    opacity: 1;
+}
+
+.radio-asc:checked ~ .label-asc,
+.radio-des:checked ~ .label-des {
+    transition: 0.5s ease-in;
+    opacity: 1;
+}
+
+.catePic {
+    height: 60px;
+    width: 100px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.itemTitle {
+    font-size: 0.8em;
+}
+
+.storeItem {
+    margin: 10px;
+    /* margin-left: 10px;
+    margin-bottom: 10px; */
+}
+
+.storeItem:hover {
+    /* opacity: 0.7; */
+}
+
+.radio-16 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+.label-16 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+.profileContainer {
+    height: 100%;
+    background-color: rgb(240, 239, 239);
+    height: 100vh;
+    border: 2px solid purple
+}
+
+.profileFormWrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 94vh;
+    /* width: 100%; */
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(160, 183, 196) , rgb(236, 239, 241));
+}
+
+.orderImage {
+    display: flex;
+    margin-left: 15px;
+}
+
+.profileForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    /* width: 350px; */
+}
+
+.profileForm h2 {
+    margin-top: 15px;
+}
+
+.profileForm h3 {
+    margin-bottom: 25px;
+}
+
+.profileForm input, .profileForm select {
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    outline: none;
+    background-color: rgb(215, 212, 212);
+}
+
+.profileForm input:hover, .profileForm select:hover {
+    outline: none
+}
+
+
+.profileForm label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profileForm label:hover {
+    opacity: 1;
+}
+
+.profileForm button {
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 350px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(43, 107, 155);
+    color: white;
+    font-weight: 500;
+}
+
+.profileForm button:hover {
+    background-color: rgb(54, 128, 177);
+}
+
+.logoutBtn {
+    border-radius: 50px;
+    width: 60px;
+    border: none;
+}
+
+.registerL {
+    color: rgb(23, 78, 218);
+}
+
+.cartContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(241, 239, 239);
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.formContainer h4 {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+
+.formContainer input {
+    margin-top: 5px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.formContainer label { 
+    margin-top: 5px;
+}
+
+.formContainer select { 
+    margin-top: 5px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.formContainer button {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 8px;
+    margin-top: 15px;
+    background-color: rgb(66, 111, 179);
+    color: white;
+    height: 32px;
+}
+
+.formContainer button:hover {
+    background-color: rgb(96, 131, 185);
+}
+
+.formContainer button:disabled {
+    background-color: rgb(147, 147, 147);
+}
+
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: white;
+    /* padding: 50px; */
+}
+
+.checkoutContainer p {
+    margin-right: 10px;
+}
+
+.checkoutWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.checkoutImage {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.checkoutImage:hover {
+    opacity: 0.2;
+}
+
+.checkoutItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singleBtnClick:disabled {
+    background-color: grey;
+}
+
+.singleBtnClick:disabled:hover {
+    background-color: grey;
+}
+
+.loggedAsPP {
+    height: 20px;
+    width: 70px;
+    border-radius: 520px;
+}
+
+.logoPic {
+    height: 46px;
+    width: 100px;
+}
+
+.paginationBttns {
+    height: 40px;
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginationBttns a {
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.paginationBttns a:hover {
+    color: white;
+    background-color: #2b2eff;
+}
+
+.paginationActive a {
+    color: white;
+    background-color: #2b2eff;
+}
+
+.singleH3 {
+    margin-bottom: 5px;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.btn-modal:hover {
+    color: rgb(96, 158, 228);
+}
+
+.btn-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    font-family: Lora;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    box-shadow: 2px 2px 10px 2px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-content a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburgerMenuCart {
+    text-align: center;
+    position: relative;
+}
+
+.hamburgerMenuItems {
+        text-align: center;
+        position: relative;
+        bottom: 30.5px;
+        right: 0px;
+        color: red;
+        font-weight: bold;
+        font-size: 1em;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    color: red;
+    cursor: pointer;
+}
+
+.hrModal {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loggedAsDiv {
+    display: flex;
+    gap: 10px;
+}
+
+@media only screen and (min-width: 25px) and (max-width: 350px){
+    .label-1, .label-2, .label-3, .label-4 {
+        padding: 0;
+    }
+    .btnDiv {
+        margin-right: 8px;
+    }
+    .paginationBttns a {
+        padding: 3px;
+        margin: 5px;
+    }
+    .singleBtnClick {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .catePic {
+        width: 30px;
+    }
+    .label-1, .label-2, .label-3, .label-4 {
+        width: 150px;
+        flex-direction: column;
+        font-size: 11px;
+    }
+    .storeItem {
+        width: 47%;
+    }
+    .btnDiv {
+        gap: 0px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 25px) and (max-width: 670px) {
+    .storeItem {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 750px) {
+    .btn-modal {
+        display: block;
+    }
+    .logoPic {
+        width: 33px;
+    }
+    .leftHeader, .rightHeader{
+        display: none;
+    }
+    .leftHeader {
+        width: 0;
+        margin-left: 0;
+        background-color: rgb(255, 255, 255);
+    }
+    .header {
+        justify-content: space-between;
+        font-size: 14px;
+        /* height: 5vh; */
+    }
+    .cartContainer {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .formContainer h4 {
+        text-align: center;
+        width: 100%;
+    }
+    .formContainer {
+        height: auto;
+        padding: 40px;
+    }
+    hr {
+        width: 20%;
+        margin: auto;
+    }
+    .checkoutContainer {
+        align-items: center;
+    }
+    
+}
+
+@media only screen and (min-width: 751px) and (max-width: 2500px) {
+
+    .btn-modal {
+        display: none;
+    }
+
+    .leftHeader, .rightHeader {
+        visibility: visible;
+    }
+
+    .responsiveMenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header {
+        font-size: 0.9em;
+    }
+    .leftHeader {
+        /* margin-right: 100px; */
+    }
+}

@@ -1,0 +1,564 @@
+.reviewsContainer {
+    min-height: 95vh;
+    background-color: rgb(241, 241, 241);
+}
+
+.reviewsModalMainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  background-color: rgb(241, 241, 241);
+}
+
+.testing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reviewDiv {
+    padding: 10px;
+    display: flex;
+    border-radius: 3px;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    /* flex-wrap: wrap; */
+    height: 140px;
+    width: 70vw;
+    font-size: 0.9em;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.reviewDivLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-size: 0.8em;
+}
+
+.reviewDiv img {
+    height: 50px;
+    width: 100%;
+}
+
+.reviewsDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* justify-content: center; */
+    /* max-width: 440px; */
+    width: 100%;
+    gap: 20px;
+}
+
+.reviewsButtonDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.individualReviewDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 234, 234);
+}
+
+.individualReviewBottom {
+    background-color: rgb(238, 234, 234);
+}
+
+.individualReviewBottom select {
+    border-radius: 2px; 
+    padding: 4px;
+}
+
+.individualReviewBottom select:focus {
+    border: 1px solid black;
+    outline: none;
+}
+
+.individualReviewBottom input:focus {
+    border: 1px solid black;
+    outline: none;
+}
+
+.individualReviewBottom input {
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.individualReviewBottom button {
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
+.individualReviewDiv h3 {
+    margin-top: 20px;
+}
+
+.individualReviewP {
+    max-width: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.thumbsUp {
+    display: inline;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.thumbsUp:hover {
+    color: green;
+}
+
+.reviewLikes {
+    display: inline;
+}
+
+.modalReviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(239, 236, 236) , rgb(168, 178, 197));
+}
+
+.modalReviewWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 30vw;
+    background-color: rgb(235, 234, 234);
+    border-radius: 4px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    opacity: 0;
+    animation: fade 0.5s ease-in-out forwards
+}
+
+.modalReviewThumbsUpDiv {
+    margin-top: 20px;
+    color: black;
+    /* transform: rotate(30deg); */
+    transition: 1s ease;
+    animation: cool
+}
+
+.individualReviewLength {
+    margin-left: 20px;
+}
+
+.modalThumbsUp {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: rotate(180deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes fade {
+      0% {
+          opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+      .modalReviewButton {
+        background-color: green;
+        color: white;
+        padding: 4px;
+        border-radius: 4px;
+        width: 150px;
+      }
+
+      .mappedReviewContainer {
+        display: flex;
+        height: 140px;
+        border-radius: 2px;
+        margin-bottom: 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        background-color: white;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 20px;
+    }
+    
+    .mappedReviewWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        height: 100%;
+        width: 120px;
+      }
+
+      .mappedReviewWrapper p {
+        font-size: 0.8em;
+      }
+
+      .mappedReviewDescription {
+        display: flex;
+        margin-left: 100px;
+        width: 100%;
+        font-size: 0.9em;
+      }
+
+      .mappedReviewLikes {
+        display: flex;
+      }
+
+      .individualReviewContainer {
+        height: 100vh;
+        background-color: rgb(238, 234, 234);
+      }
+
+      .mappedReviewBigThumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+      }
+
+      .reviewBigLikes {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+
+      .reviewsTopDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reviewsTopDiv p {
+        margin-top: 10px;
+      }
+
+      .reviewsTopDiv h3 {
+        margin-top: 35px;
+        font-family: Roboto;
+      }
+
+      .topReviewersContainer {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .reviewsTop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 5px;
+      }
+
+      .reviewsTop {
+        font-size: 0.8em;
+      }
+
+      .reviewsTop:nth-of-type(1) {
+        color: gold;
+      }
+      .reviewsTop:nth-of-type(2) {
+        color: silver;
+      }
+      .reviewsTop:nth-of-type(3) {
+        color: #CD7F32;
+      }
+
+      .individualFilters {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      .individualReviewNoMatchSearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+      }
+
+      .individualReactStars {
+        position: relative;
+        bottom: 17px;
+        left: 55px;
+        font-size: 0.8em;
+      }
+
+      
+
+      .reviewsButton {
+        padding: 6px;
+        border-radius: 50px;
+        border: 1px solid black;
+        background-color: rgb(64, 64, 64);
+        color: white;
+        margin-bottom: 10px;
+        width: 100px;
+      }
+
+      .reviewsButton:hover {
+        transition: 0.5s ease-in;
+        background-color: rgb(130, 128, 128);
+      }
+
+      .reviewsFilterSelect {
+        display: flex;
+        justify-content: flex-end;
+        width: 70vw;
+      }
+
+      .reviewsFilterSelect select {
+        padding: 4px;
+        border-radius: 3px;
+      }
+
+      .reviewsModalContainer  {
+        background-color: white;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+      }
+
+      .reviewsModalContainer h3 {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+      }
+
+      .reviewsModalImage {
+        height: 100px;
+        width: 100px;
+      }
+
+      .reviewsModalLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+      }
+
+      .reviewsModalMain {
+        display: flex;
+        height: 180px;
+        width: 100%;
+        padding: 5px;
+        font-size: 0.9em;
+        background-color: white;
+      }
+
+      .reviewsModalReviews {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .reviewsModalReviews p {
+        width: 500px;
+      }
+
+      .reviewsModalThumbsUp {
+        font-size: 32px;
+      }
+
+      .reviewsModalCloseButton {
+        position: relative;
+        top: 26px;
+        left: 396px;
+        margin-bottom: 5px;
+        color: red;
+        cursor: pointer;
+      }
+
+      .reviewsModalHr {
+        width: 100%;
+      }
+
+      .reviewsModalItemNameHidden {
+        display: none;
+      }
+
+      @media only screen and (max-width: 850px) {
+        .individualFilters {
+            justify-content: center;
+        }
+        .individualReviewBottom input {
+            text-align: center;
+            margin-left: 20px;
+            width: 150px;
+        }
+        .individualReviewBottom select {
+            width: 150px;
+        }
+        .individualReviewP {
+            margin-right: 15px;
+        }
+        .individualReviewDiv {
+            font-size: 0.8em;
+        }
+        .mappedReviewDescription {
+            margin-left: 30px;
+            font-size: 0.6em;
+        }
+        .individualReviewLength {
+            margin-bottom: 10px;
+          }
+          .thumbsUp {
+            font-size: 20px;
+          }
+          .mappedReviewDescription {
+            align-items: center;
+            margin-right: 10px;
+          }
+          .mappedReviewWrapper {
+            width: 280px;
+          }
+          .individualReactStars {
+            bottom: 15px;
+            left: 52px;
+          }
+          .reviewDiv {
+            width: 90vw;
+            font-size: 0.7em;
+          }
+          .reviewsFilterSelect {
+            width: 90vw;
+          }
+          .reviewsModalMain {
+            font-size: 0.8em;
+          }
+          .reviewsModalLeft {
+            width: auto;
+          }
+          .reviewsModalCloseButton {
+            left: 299px
+          }
+      }
+
+      @media only screen and (max-width: 500px) { 
+        .mappedReviewDescription {
+            margin-right: 10px;
+            font-size: 0.6em;
+        }
+        .mappedReviewWrapper {
+            width: 250px;
+        }
+        .mappedReviewDescription {
+            margin-left: 10px;
+        }
+        .mappedReviewContainer {
+            height: 200px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .individualReviewBottom input, .individualReviewBottom select {
+            width: 130px;
+        }
+
+        .individualReviewBottom select {
+            /* margin-right: 20px; */
+            width: 150px;
+        }
+        .reviewDiv {
+            width: 95vw;
+            font-size: 0.5em;
+          }
+          .reviewsFilterSelect {
+            margin-left: 22px;
+          }
+        
+      }
+
+      @media only screen and (max-width: 690px) {
+        .reviewsModalMain {
+          width: 500px;
+          font-size: 0.6em;
+        }
+        .reviewsModalReviews p {
+          width: 400px;
+        }
+        .reviewsModalImage {
+          height: 50px;
+          width: 50px;
+        }
+        .reviewsModalCloseButton {
+          left: 242px
+        }
+        .reviewsModalThumbsUp {
+          font-size: 20px;
+        }
+        .reviewsModalLeft {
+          border: 2px solid red;
+          height: 100%;
+        }
+        .reviewsModalItemName {
+          display: none;
+        }
+        .reviewsModalItemNameHidden {
+          display: block;
+        }
+      }
+
+      @media only screen and (max-width: 510px) {
+        .reviewsModalMain {
+          width: 350px;
+        }
+        .reviewsModalReviews p {
+          width: 250px;
+        }
+        .reviewsModalCloseButton {
+          left: 167px;
+        }
+      }
+
+      @media only screen and (max-width: 355px) {
+        .reviewsModalMain {
+          width: 280px;
+          font-size: 0.4em;
+        }
+        .reviewsModalReviews p {
+          width: 200px;
+        }
+        .reviewsModalCloseButton {
+          left: 133px;
+        }
+      }
+
+      @media only screen and (max-width: 320px) {
+        .reviewsFilterSelect select {
+          margin-right: 3px;
+        }
+      }

@@ -1,0 +1,148 @@
+.ordersContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-color: rgb(220, 230, 239); */
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+.ordersContainer h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ordersOrder {
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    width: 80vw;
+    border-radius: 4px;
+    padding: 6px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.orders2Order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderWrapper {
+    /* display: flex; */
+}
+
+.ordersOrderWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.ok {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.orderImage {
+    height: 50px;
+    width: 100px;
+}
+
+.ordersPrice {
+    display: flex;
+    justify-items: flex-end;
+}
+
+.timeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.estimatedDelivery {
+    width: 200px
+}
+
+.orderImage {
+    height: 45px;
+    width: 50px;
+}
+
+.orderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.orderCards {
+    height: 250px;
+    width: 380px;
+    border-radius: 3px;
+    background-color: white;
+    margin-left: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.orderCards:hover {
+    opacity: 0.7;
+}
+
+.mainOrders {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.totalOrdersPrice {
+    margin-top: 5px;
+}
+
+.estDeliveryDate {
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 25px) and (max-width: 730px){
+    .ordersOrder {
+        flex-direction: column;
+    }
+    .timeContainer {
+        justify-content: center;
+    }
+    .ok {
+        justify-content: center;
+    }
+    .ordersOrderWrapper {
+        margin-right: 0px;
+    }
+    .orderImage {
+        /* margin-left: 0px; */
+    }
+}
+
+@media only screen and (min-width: 10px) and (max-width: 802px) {
+    .orderCards {
+        /* height: 300px; */
+        width: 70vw;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    .orderCards {
+        width: 90vw;
+    }
+}

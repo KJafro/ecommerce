@@ -1,0 +1,212 @@
+.ratingsContainer {
+    background-color: rgb(234, 232, 232);
+    height: 100vh;
+}
+
+.ratingsTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.ratingsTop h3 {
+    margin-top: 80px;
+}
+
+.ratingsImage {
+    height: 150px;
+    width: 350px;
+}
+
+.reviewsNumberRating {
+    margin-top: 10px;
+}
+
+.ratingsResults {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid grey; */
+    margin-top: 15px;
+}
+
+.rateText {
+    text-align: center;
+}
+
+.reviewText {
+    margin-top: 23.5px;
+    margin-left: 25px;
+}
+
+.ratingForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.ratingForm textarea, .ratingForm select, .ratingForm input {
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 4px;
+    margin-top: 5px;
+}
+
+.ratingForm textarea {
+    height: 150px;
+    text-align: left;
+}
+
+.resultsRating {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.buttonSubmit  {
+    margin-top: 5px;
+    background-color: rgb(65, 166, 65);
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+}
+
+.buttonReview {
+    background-color: green;
+    margin-top: 15px;
+    padding: 6px;
+    border-radius: 4px;
+    color: white;
+    border: 0.5px solid black;
+    font-size: 0.75em;
+    width: 125px;
+}
+
+.buttonReview:hover {
+    background-color: rgb(91, 160, 91);
+    transition: 1.5s ease;
+}
+
+.reviewModal-content {
+    font-family: Lora;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 500px;
+    box-shadow: 2px 2px 10px 2px;
+}
+
+.ratingStars {
+    margin-top: 5px;
+}
+
+.reviewTextDiv {
+    margin-bottom: 30px;
+}
+
+.modalClose { 
+    font-size: 1.2em;
+    color: red;
+    cursor: pointer;
+    position: relative;
+    bottom: 15px;
+    left: 240px
+}
+
+.reviewsDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.reviewsDiv button {
+    background-color: green;
+    margin-top: 5px;
+    padding: 6px;
+    border-radius: 4px;
+    color: white;
+    border: 0.5px solid black;
+    font-size: 0.75em;
+    width: 125px;
+}
+
+.ratingsContainer button:hover {
+    background-color: rgb(90, 174, 90);
+    transition: 1.5s ease;
+}
+
+
+
+@media only screen and (min-width: 750px) {
+    .reviewText {
+        font-size: 0.9em;
+        margin-top: 26.5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .reviewText {
+        font-size: 0.8em;
+        margin-top: 27.5px;
+        margin-left: 15px;
+    }
+    .ratingsImage {
+        height: 100px;
+        width: 200px;
+    }
+    .modalClose { 
+        bottom: 15px;
+        left: 140px
+    }
+    .reviewModal-content {
+        width: 300px;
+    }
+    .validationDiv {
+        margin-top: 5px;
+        width: 128%;
+        font-size: 0.65em;
+    }
+    .ratingForm textarea, .ratingForm select, .ratingForm input {
+        width: 115%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .reviewText {
+        margin-top: 33px;
+        font-size: 0.5em;
+    }
+    .ratingStars {
+        /* margin-top: 20px; */
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .reviewText {
+        margin-top: 33px;
+        font-size: 0.5em;
+    }
+    .reviewModal-content {
+        width: 200px;
+    }
+    .validationDiv {
+        margin-top: 5px;
+        width: 128%;
+        font-size: 0.42em;
+    }
+    .ratingForm textarea, .ratingForm select, .ratingForm input {
+        width: 130%;
+    }
+    .modalClose {
+        left: 90px;
+    }
+}
