@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import Axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
-import { Header } from '../components/Header'
 import { Context } from '../context/Context'
 import './single.css'
 import moment from 'moment';
@@ -33,6 +32,7 @@ export default function SingleOrderPage() {
 
   console.log(orders)
   console.log(items)
+  console.log('lol')
 
   return (
     <>
