@@ -60,7 +60,7 @@ export default function SingleItems({stores, size, Size, setSize, error, setErro
   }, [params])
 
     useEffect(() => {
-      Axios.get('http://localhost:3300/order')
+      Axios.get('https://polished-tree-8036.fly.dev/order')
       .then(res => {
         console.log(res.data)
         setItems(res.data)
