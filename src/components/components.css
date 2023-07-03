@@ -481,7 +481,7 @@ select {
     text-align: center;
 }
 
-select:hover {
+select:focus {
     outline: none
 }
 
