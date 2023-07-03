@@ -19,6 +19,7 @@
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.14.1",
     "react-spinners": "^0.13.8",
+    "react-stars": "^2.2.5",
     "react-timeago": "^7.1.0"
   },
   "devDependencies": {
