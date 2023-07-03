@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Contexter>
-    <Router basename='/ecommerce'>
+    <Router basename='/merry-basbousa-c35611'>
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/login" element={loggedIn ? <Home/> : <Login />} />
