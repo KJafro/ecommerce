@@ -19,7 +19,7 @@ export default function SingleItemPage({items}) {
     const [msg, setMsg] = useState("Add to Cart")
 
     useEffect(() => {
-        Axios.get(`http://localhost:3300/item/${params.itemsId}`)
+        Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
         .then(res => setStores(res.data))
         setIsLoading(false)
     }, [params])

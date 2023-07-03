@@ -18,7 +18,7 @@ export default function Login() {
   const loginUser = async (e) => {
     e.preventDefault()
     try {
-      const {data} = await Axios.post('http://localhost:3300/auth/login', {name, password})
+      const {data} = await Axios.post('https://polished-tree-8036.fly.dev/auth/login', {name, password})
       // values.setUser(data.name)
       setSuccess(`Connected as ${name}!`)
       setName(name)

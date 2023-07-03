@@ -29,7 +29,7 @@ export default function Cart() {
     const buyItems = (e) => {
         e.preventDefault()
             if (address1.length > 0 && address2.length > 0 && postcode.length > 0 && cardNumber.length >= 4) {
-        Axios.post('http://localhost:3300/order', {fullName, country, address1,
+        Axios.post('https://polished-tree-8036.fly.dev/order', {fullName, country, address1,
         address2, postcode, cardNumber, items: values.items, discount})
         setFullName(values.user)
         setPay(true)

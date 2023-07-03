@@ -23,7 +23,7 @@ export default function Home() {
 
     useEffect(() => {
         const ref = () => {
-            Axios.get('http://localhost:3300/item')
+            Axios.get('https://polished-tree-8036.fly.dev/item')
         .then(res => {
             setStore(res.data)
             setFiltered(res.data)

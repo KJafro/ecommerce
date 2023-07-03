@@ -20,7 +20,7 @@ export default function Register() {
     e.preventDefault()
     try {
       if (pass1Ref.current.value == pass2Ref.current.value) {
-        await Axios.post('http://localhost:3300/auth/register', {name, email, password: pass1Ref.current.value, reviewsNum})
+        await Axios.post('https://polished-tree-8036.fly.dev/auth/register', {name, email, password: pass1Ref.current.value, reviewsNum})
         setTimeout(() => {
           window.location.replace("/login")
         }, 2000)

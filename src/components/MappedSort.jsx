@@ -5,7 +5,6 @@ import ReactStars from 'react-stars'
 import { BsHandThumbsUp } from "react-icons/bs";
 import moment from 'moment';
 import '../pages/reviews.css'
-import Axios from 'axios'
 
 export const MappedSort = ({filter, params, time, rating, likes, addLike, searchReview, setFilter}) => {
     const { values } = useContext(Context)

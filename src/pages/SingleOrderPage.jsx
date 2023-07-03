@@ -19,7 +19,7 @@ export default function SingleOrderPage() {
   const [signed, setSigned] = useState(names[Math.floor(Math.random() * names.length)])
 
   useEffect(() => {
-    Axios.get(`http://localhost:3300/order/${params.ordersId}`)
+    Axios.get(`https://polished-tree-8036.fly.dev/order/${params.ordersId}`)
       .then(res => {
         setOrders(res.data)
         setItems(res.data.items)

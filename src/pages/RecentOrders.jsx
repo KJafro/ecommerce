@@ -15,7 +15,7 @@ date.setDate(date.getDate() + 3);
 const finalDate = date.getDate()+'/'+ (date.getMonth()+1) +'/'+date.getFullYear();
 
 useEffect(() => {
-        Axios.get('http://localhost:3300/order')
+        Axios.get('https://polished-tree-8036.fly.dev/order')
         .then(res => {
             setOrders(res.data)
         })

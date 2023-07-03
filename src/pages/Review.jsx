@@ -32,7 +32,7 @@ export default function Review() {
     }, []);
 
 useEffect(() => {
-    Axios.get('http://localhost:3300/review')
+    Axios.get('https://polished-tree-8036.fly.dev/review')
     .then(res => {
         console.log(res.data)
         setReviews(res.data)
@@ -41,7 +41,7 @@ useEffect(() => {
 }, [])
 
 useEffect(() => {
-    Axios.get(`http://localhost:3300/item/${params.itemsId}`)
+    Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
     .then(res => {
         console.log(res.data)
         setItem(res.data)
@@ -59,7 +59,7 @@ useEffect(() => {
 // const updatedReviewDesc = existingReviewsDesc.concat(reviewDesc);
 
 const addLike = async (like, currentLikes) => {
-    const response = await Axios.get(`http://localhost:3300/review/${like}`)
+    const response = await Axios.get(`https://polished-tree-8036.fly.dev/review/${like}`)
     console.log(response.data.likesName)
     if(!values.user) {
         setError(true)
@@ -78,7 +78,7 @@ const addLike = async (like, currentLikes) => {
     else if (values.user) {
         try {
             const updatedLikes = currentLikes + 1
-            Axios.put(`http://localhost:3300/review/${like}`, {likes: updatedLikes, likesName: values.user})
+            Axios.put(`https://polished-tree-8036.fly.dev/review/${like}`, {likes: updatedLikes, likesName: values.user})
             setModal(true)
             setLiked(like)
             setTimeout(() => {

@@ -50,7 +50,7 @@ export default function SingleItems({stores, size, Size, setSize, error, setErro
     }
 
     useEffect(() => {
-      Axios.get(`http://localhost:3300/item/${params.itemsId}`)
+      Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
       .then(res => {
           console.log(res.data.rating)
           setActualRating(res.data.rating)

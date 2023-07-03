@@ -22,14 +22,14 @@ export default function Reviews() {
   const [bestReviews, setBestReviews] = useState([])
 
   useEffect(() => {
-    Axios.get('http://localhost:3300/review').then((res) => {
+    Axios.get('https://polished-tree-8036.fly.dev/review').then((res) => {
       setArrays(res.data);
       setIsLoading(false);
     });
   }, []);
   
   useEffect(() => {
-    Axios.get('http://localhost:3300/user')
+    Axios.get('https://polished-tree-8036.fly.dev/user')
     .then((res) => setTopReviewers(res.data))
   }, [])
 

@@ -49,7 +49,7 @@ export default function Rating() {
     const average = sum / nums.length;
 
     useEffect(() => {
-        Axios.get(`http://localhost:3300/item/${params.itemsId}`)
+        Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
         .then(res => {
           setDetails(res.data)
           console.log(res.data)
@@ -60,7 +60,7 @@ export default function Rating() {
     }, [params])
 
     useEffect(() => {
-      Axios.get(`http://localhost:3300/user/${values.id}`)
+      Axios.get(`https://polished-tree-8036.fly.dev/user/${values.id}`)
       .then(res => setReviewsId(res.data.reviewsNum))
     })
     
@@ -69,7 +69,7 @@ export default function Rating() {
       
       try {
         // Retrieve the existing ratings from the server
-        const response = await Axios.get(`http://localhost:3300/item/${params.itemsId}`);
+        const response = await Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`);
         const existingRatings = response.data.rating;
         const existingReviews = response.data.reviews;
         const existingReviewsDesc = response.data.reviewDesc;
@@ -88,9 +88,9 @@ export default function Rating() {
              setSuccess(true)
              setError(false)
              setErrorLength(false)
-             await Axios.put(`http://localhost:3300/item/${params.itemsId}`, { rating: updatedRatings, reviews: updatedReviews, reviewDesc: updatedReviewDesc});
-             Axios.put(`http://localhost:3300/user/${values.id}`, {reviewsNum: reviewsId + 1})
-             Axios.post('http://localhost:3300/review', {name: values.user, itemName: details.title, rating, review: reviews, image: details.image, itemId: params.itemsId, reviewDesc, likes, dislikes})
+             await Axios.put(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`, { rating: updatedRatings, reviews: updatedReviews, reviewDesc: updatedReviewDesc});
+             Axios.put(`https://polished-tree-8036.fly.dev/user/${values.id}`, {reviewsNum: reviewsId + 1})
+             Axios.post('https://polished-tree-8036.fly.dev/review', {name: values.user, itemName: details.title, rating, review: reviews, image: details.image, itemId: params.itemsId, reviewDesc, likes, dislikes})
              setTimeout(() => {
                window.location.replace(`/rating/${params.itemsId}`)
               }, 2000)
