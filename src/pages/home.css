@@ -104,7 +104,7 @@ img {
 
 .matchingItems {
     /* opacity: 0; */
-    animation: fadein 6s ease-in;
+    animation: fadein 10s ease-in;
 }
 
 @keyframes fadein {
