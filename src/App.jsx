@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Contexter>
-    <Router>
+    <Router basename='/ecommerce'>
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/login" element={loggedIn ? <Home/> : <Login />} />
