@@ -478,7 +478,13 @@ body.active-modal {
 
 select {
     color: rgb(74, 73, 73);
+    text-align: center;
 }
+
+select:hover {
+    outline: none
+}
+
 
 
 .overlay {
