@@ -244,12 +244,6 @@ progress::-webkit-progress-bar {
     }
 }
 
-@media only screen and (min-height: 680px) { 
-    .ratingsContainer {
-        height: 100vh;
-    }
-}
-
 @media only screen and (min-height: 920px) { 
     .ratingsContainer {
         font-size: 1.2em;
