@@ -217,7 +217,7 @@ export default function Rating() {
     </div>
         </div>
       <div className='reviewsDiv' >
-      {actualRating == 0 ? "This item currently has no reviews!" : <Link to={`/review/${params.itemsId}`}><button>Display all Reviews</button></Link>}
+      {actualRating == 0 ? "This item currently has no reviews!" : <Link to={`/review/${params.itemsId}`}><button style={{marginBottom: "10px"}}>Display all Reviews</button></Link>}
       </div>
     </div>}
     
