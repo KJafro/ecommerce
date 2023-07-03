@@ -479,6 +479,8 @@ body.active-modal {
 select {
     color: rgb(74, 73, 73);
     text-align: center;
+    outline: 1px solid black;
+    border: 1px solid black;
 }
 
 select:focus {
