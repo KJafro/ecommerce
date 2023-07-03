@@ -38,7 +38,7 @@ export const Menu = () => {
                 <Link to='/about'><h2>ABOUT</h2></Link>
                 <hr className='hrModal'/>
                 {loggedIn ? <Link to='/profile'><h2>ACCOUNT</h2></Link> : <Link to='/register'><div><h2>REGISTER</h2><h2>LOGIN</h2></div></Link>}
-                <Link to='/cart'><ul className='hamburgerMenuCart'><BsCart size={30}/></ul></Link>
+                <Link to='/cart'><ul className='hamburgerMenuCart'><BsCart size={40}/></ul></Link>
                 <Link to='/cart'><p className='hamburgerMenuItems'>{values.items.length > 0 && values.items.length}</p></Link>
                 <button className="close-modal" onClick={toggleModal}>
                   X

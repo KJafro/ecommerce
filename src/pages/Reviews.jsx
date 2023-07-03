@@ -31,7 +31,7 @@ export default function Reviews() {
   useEffect(() => {
     Axios.get('http://localhost:3300/user')
     .then((res) => setTopReviewers(res.data))
-  })
+  }, [])
 
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 5);

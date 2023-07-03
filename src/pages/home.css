@@ -78,8 +78,8 @@ img {
 
 .topImage {
     display: flex;
-    height: 340px;
-    background-image: url('../assets/websiteimage.jpg');
+    height: 320px;
+    background-image: url('../assets/heroimage.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,4 +109,10 @@ img {
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media only screen and (max-width: 400px) { 
+    .topImage {
+        height: 260px;
+    }
 }

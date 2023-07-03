@@ -32,7 +32,6 @@ export default function SingleOrderPage() {
 
   console.log(orders)
   console.log(items)
-  console.log('lol')
 
   return (
     <>
@@ -69,19 +68,32 @@ export default function SingleOrderPage() {
               {moment().format('MM/DD/YYYY') >= moment(orders.createdAt).add(3, 'd').format('MM/DD/YYYY') && (
                 <p>
                   <span style={{ color: "green" }}>DELIVERED</span>
+                  <progress value={3} max={3}></progress>
                 </p>
               )}
               {moment().format('MM/DD/YYYY') === moment(orders.createdAt).add(2, 'd').format('MM/DD/YYYY') && (
-                <p>OUT FOR DELIVERY</p>
+                                <div>
+                                <p style={{ color: "blue" }}>OUT FOR DELIVERY</p>
+                                <progress value={2} max={3}></progress>
+                              </div>  
               )}
               {moment().format('MM/DD/YYYY') === moment(orders.createdAt).add(1, 'd').format('MM/DD/YYYY') && (
-                <p style={{ color: "blue" }}>PACKING</p>
+                <div>
+                  <p style={{ color: "blue" }}>PACKING</p>
+                  <progress value={1} max={3}></progress>
+                </div>  
               )}
               {moment().format('MM/DD/YYYY') === moment(orders.createdAt).add(0, 'd').format('MM/DD/YYYY') && (
+                <div>
                 <p style={{ color: "blue" }}>PACKING</p>
+                <progress value={1} max={3}></progress>
+              </div>
               )}
               {moment().format('MM/DD/YYYY') >= moment(orders.createdAt).add(3, 'd').format('MM/DD/YYYY') && (
-                <p>Signed for by: {signed}</p>
+                <div>
+                  <p>Signed for by: {signed}</p>
+                <progress value={3} max={3}></progress>
+              </div>
               )}
               <Link to={values.user ? '/profile' : '/orders'}>
                 <BiArrowBack

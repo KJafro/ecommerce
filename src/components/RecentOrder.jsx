@@ -13,6 +13,7 @@ export const RecentOrder = ({orders, finalDate, TimeAgo}) => {
     const pagesVisited = pageNumber * usersPerPage
 
     const displayUsers = orders.slice(pagesVisited, pagesVisited + usersPerPage)
+    .sort((a, b) => b.createdAt - a.createdAt)
     .map((order, index) => {
         return (
         <Link to={`/orders/${order._id}`} key={index} ><div className='ordersOrder'>

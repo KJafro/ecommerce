@@ -3,6 +3,7 @@ import { Context } from '../context/Context'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
 import '../components/components.css'
+import { AiOutlineHome } from "react-icons/ai";
 import ClipLoader from 'react-spinners/ClipLoader'
 
 export default function Cart() {
@@ -20,6 +21,7 @@ export default function Cart() {
     const [message, setMessage] = useState("")
     const [pay, setPay] = useState(false)
     const [error, setError] = useState(false)
+    
 
     const noneDiscountTotal = values.items.reduce((a, b) => a + b.price * 1, 0)
     const discountTotal = values.items.reduce((a, b) => a + b.price * 90 / 100, 0)
@@ -50,7 +52,7 @@ export default function Cart() {
         discountCode == "SAVE" ? setDiscount(true) : setDiscount(false) 
     })
 
-    values.items.length < 8 && values.setDisable(false)
+    // values.items.length < 8 && values.setDisable(false)
 
     useEffect(() => {
         country == 'UK' ? setZipPost('Postcode') : setZipPost('ZIP Code')
@@ -59,8 +61,10 @@ export default function Cart() {
   return (
     <div className='cartContainer'>
         <div className="cartWrapper">
-
             <form onSubmit={buyItems} className='formContainer'>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                <Link to='/'><AiOutlineHome size={40} style={{marginBottom: "10px"}}/></Link>
+                </div>
         {values.user ? "" : <h4>You are currently logged in as a guest!
             Sign up <Link to='/register' className='registerL'>here</Link> to receive exclusive offers!</h4>}
             <label>Name</label>

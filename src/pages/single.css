@@ -4,7 +4,7 @@
 
 .singleDiv {
     display: flex;
-    height: 95vh;
+    min-height: 96vh;
     background-color: rgb(237, 234, 234);
 }
 
@@ -21,7 +21,7 @@ button {
 .singleImgPic {
     height: 40%;
     width: 30%;
-}
+}  
 
 .singleWrapper {
     display: flex;
@@ -138,7 +138,7 @@ button {
         width: 70px;
     }
     .singleOrderzzz {
-        width: 50%;
+        width: 60%;
     }
     .singleWrapper {
         flex-direction: column;

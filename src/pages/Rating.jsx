@@ -14,7 +14,6 @@ export default function Rating() {
     const [details, setDetails] = useState([])
     const [actualRating, setActualRating] = useState([])
     const [showReviews, setShowReviews] = useState([])
-    const [reviewsNum, setReviewsNum] = useState(1)
     const [reviewDesc, setReviewDesc] = useState("")
     const [likes, setLikes] = useState(0)
     const [dislikes, setDislikes] = useState(0)
@@ -24,10 +23,12 @@ export default function Rating() {
     const [isVisible, setIsVisible] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [reviewsId, setReviewsId] = useState(null)
-
-    const [name, setName] = useState("")
-    const [newRating, setNewRating] = useState("")
-    const [review, setReview] = useState("")
+    const [rating5, setRating5] = useState([])
+    const [rating4, setRating4] = useState([])
+    const [rating3, setRating3] = useState([])
+    const [rating2, setRating2] = useState([])
+    const [rating1, setRating1] = useState([])
+    const [detailRating, setDetailRating] = useState(false)
 
     const openModal = () => {
       setIsModalOpen(true);
@@ -62,11 +63,6 @@ export default function Rating() {
       Axios.get(`http://localhost:3300/user/${values.id}`)
       .then(res => setReviewsId(res.data.reviewsNum))
     })
-
-    // useEffect(() => {
-    //   Axios.get(`http://localhost:3300/review/${params._id}`)
-    //   .then (res => console.log(res.data))
-    // })
     
     const dta = async (e) => {
       e.preventDefault();
@@ -131,18 +127,41 @@ export default function Rating() {
 
       console.log(params.itemsId)
 
+      useEffect(() => {
+        setRating5(actualRating.filter((rating) => rating == "5"))
+        setRating4(actualRating.filter((rating) => rating == "4"))
+        setRating3(actualRating.filter((rating) => rating == "3"))
+        setRating2(actualRating.filter((rating) => rating == "2"))
+        setRating1(actualRating.filter((rating) => rating == "1"))
+      }, [actualRating])
+
+      const rating5Avg = rating5.length * 100 / actualRating.length
+      const rating4Avg = rating4.length * 100 / actualRating.length
+      const rating3Avg = rating3.length * 100 / actualRating.length
+      const rating2Avg = rating2.length * 100 / actualRating.length
+      const rating1Avg = rating1.length * 100 / actualRating.length
+
+
+
   return (
     <>
     {details.length == 0 ? <Spinner/> : <div className='ratingsContainer'>
     <Header/>
       <div className="ratingsTop">
-
-      <h3 style={{marginBottom: "10px"}}>{details.title}</h3>
+      <h3 style={{marginBottom: "20px"}}>{details.title}</h3>
       <img src={details.image} className='ratingsImage' alt="" />
-      {/* <p>£{details.price}</p> */}
-      {values.modal && <ReactStars value={average} edit={false} size={20} />}
+      {!values.modal && <ReactStars value={average} edit={false} size={20} />}
         {actualRating == 0 ? "" : <div><p className='reviewsNumberRating'>Reviews: {actualRating.length}</p>
-        <p>Average Rating: {average.toFixed(1)}</p></div>}
+        <p style={{marginBottom: "5px"}}>Average Rating: {average.toFixed(1)}</p></div>}
+
+        <div style={{marginBottom: "5px"}}>
+        {rating5.length > 0 && <div><p style={{fontSize: "0.6em"}}>5⭐ ({rating5Avg.toFixed(0)}%)</p><progress value={rating5.length} max={actualRating.length} id='myProgress'></progress></div>}
+        {rating4.length > 0 && <div><p style={{fontSize: "0.6em"}}>4⭐ ({rating4Avg.toFixed(0)}%)</p><progress value={rating4.length} max={actualRating.length}></progress></div>}
+        {rating3.length > 0 && <div><p style={{fontSize: "0.6em"}}>3⭐ ({rating3Avg.toFixed(0)}%)</p><progress value={rating3.length} max={actualRating.length} id='myProgress'></progress></div>}
+        {rating2.length > 0 && <div><p style={{fontSize: "0.6em"}}>2⭐ ({rating2Avg.toFixed(0)}%)</p><progress value={rating2.length} max={actualRating.length}></progress></div>}
+        {rating1.length > 0 && <div><p style={{fontSize: "0.6em"}}>1⭐ ({rating1Avg.toFixed(0)}%)</p><progress value={rating1.length} max={actualRating.length}></progress></div>}
+        </div>
+
       {values.user ? <button onClick={openModal} className='buttonReview'>Write a Review</button> : <p style={{color: "red", marginTop: "20px"}}>You need to be logged in to write a review!</p>}
       {actualRating == 0 ? "" : <p style={{marginTop: "15px"}}>Displaying latest 5 reviews:</p>}
       {isModalOpen && (

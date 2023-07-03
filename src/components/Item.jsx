@@ -20,7 +20,6 @@ export const Item = ({items}) => {
           <p className='itemTitle'>{items.title}</p>
           <p>£{items?.price}</p>
           <p style={{fontSize: "0.65em"}}>{items.reviews.length} {items.reviews.length == 1 ? "Review" : "Reviews"}</p>
-          {/* <p>{items.rating[0] / items.rating.length}</p> */}
           </Link>
           </div>
   )
