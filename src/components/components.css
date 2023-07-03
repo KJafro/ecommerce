@@ -476,6 +476,11 @@ body.active-modal {
     position: fixed;
 }
 
+select {
+    color: rgb(74, 73, 73);
+}
+
+
 .overlay {
     background: rgba(49,49,49,0.8);
 }
