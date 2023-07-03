@@ -130,7 +130,7 @@ export default function Reviews() {
         {isLoading ? "" : <p style={{marginBottom: "10px"}}>Displaying {reviewsMapped.length} of {arrays.length}</p>}
         <div className='reviewsFilterSelect'>
         {!isLoading && <select name="filters" id="filters" onChange={(e) => setRating(e.target.value)}>
-          <option value="highest">Latest Reviews</option>
+          <option value="highest">Newest Reviews</option>
           <option value="lowest">Oldest Reviews</option>
         </select>}
         </div>

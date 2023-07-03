@@ -24,6 +24,11 @@
     margin-left: 120px;
 }
 
+.leftHeader p:hover {
+    color: rgb(69, 141, 196);
+    transition: 1s ease;
+}
+
 .rightHeader {
     background-color: rgb(255, 255, 255);
 }
