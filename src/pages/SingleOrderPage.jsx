@@ -30,9 +30,6 @@ export default function SingleOrderPage() {
     moment().format('MM/DD/YYYY') >= moment(orders.createdAt).add(3, 'd').format('MM/DD/YYYY')
   }, [])
 
-  console.log(orders)
-  console.log(items)
-
   return (
     <>
       {/* <Header/> */}
@@ -55,7 +52,7 @@ export default function SingleOrderPage() {
             )}
             {orders.discount && (
               <p style={{ marginTop: "5px", color: "green" }}>
-                You saved: £{items.reduce((a, b) => a + b.price * 10 / 100, 0).toFixed(2)}
+                {orders.fullName} saved: £{items.reduce((a, b) => a + b.price * 10 / 100, 0).toFixed(2)}
               </p>
             )}
             <div className='singleOrderDetails'>

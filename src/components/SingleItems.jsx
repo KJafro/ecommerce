@@ -37,7 +37,6 @@ export default function SingleItems({stores, size, Size, setSize, error, setErro
 
 
     const nums = actualRating.map((item) => Number((item)))
-    console.log(nums)
     const sum = nums.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     const average = sum / nums.length;
 
@@ -52,9 +51,7 @@ export default function SingleItems({stores, size, Size, setSize, error, setErro
     useEffect(() => {
       Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
       .then(res => {
-          console.log(res.data.rating)
           setActualRating(res.data.rating)
-          console.log(res.data.reviews)
           setReviews(res.data.reviews)
       })
   }, [params])
@@ -62,7 +59,6 @@ export default function SingleItems({stores, size, Size, setSize, error, setErro
     useEffect(() => {
       Axios.get('https://polished-tree-8036.fly.dev/order')
       .then(res => {
-        console.log(res.data)
         setItems(res.data)
       })
     }, [])

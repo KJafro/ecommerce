@@ -52,10 +52,8 @@ export default function Rating() {
         Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
         .then(res => {
           setDetails(res.data)
-          console.log(res.data)
           setShowReviews(res.data.reviews)
           setActualRating(res.data.rating)
-          console.log(res.data.rating)
         })
     }, [params])
 
@@ -100,8 +98,6 @@ export default function Rating() {
           }
         };
         
-        console.log(details.title)
-        
         const handleRatingChange = (event) => {
         setRating(event.target.value);
       };
@@ -124,8 +120,6 @@ export default function Rating() {
       const toggleVisibility = () => {
         setIsVisible(!isVisible);
       };
-
-      console.log(params.itemsId)
 
       useEffect(() => {
         setRating5(actualRating.filter((rating) => rating == "5"))

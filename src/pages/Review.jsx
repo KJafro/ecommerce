@@ -34,7 +34,6 @@ export default function Review() {
 useEffect(() => {
     Axios.get('https://polished-tree-8036.fly.dev/review')
     .then(res => {
-        console.log(res.data)
         setReviews(res.data)
         setFilter(res.data)
     })
@@ -43,7 +42,6 @@ useEffect(() => {
 useEffect(() => {
     Axios.get(`https://polished-tree-8036.fly.dev/item/${params.itemsId}`)
     .then(res => {
-        console.log(res.data)
         setItem(res.data)
         setRatings(res.data.rating)
     })
@@ -60,7 +58,6 @@ useEffect(() => {
 
 const addLike = async (like, currentLikes) => {
     const response = await Axios.get(`https://polished-tree-8036.fly.dev/review/${like}`)
-    console.log(response.data.likesName)
     if(!values.user) {
         setError(true)
         handleScrollToTop()
@@ -95,11 +92,6 @@ const updatedArray = filter.map((review) => ({
     ...review,
     createdAt: new Date(review.createdAt)
 }))
-
-    console.log(updatedArray)
-    console.log(params.itemsId)
-    console.log(reviews.createdAt)
-    console.log(reviews)
 
     const handleScrollToTop = () => {
         window.scrollTo({
