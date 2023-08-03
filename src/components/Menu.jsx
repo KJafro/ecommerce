@@ -35,7 +35,6 @@ export const Menu = () => {
                 <Link to='/' onClick={toggleModal}><h2>PRODUCTS</h2></Link>
                 <Link to='/orders' onClick={toggleModal}><h2>ORDERS</h2></Link>
                 <Link to='/reviews' onClick={toggleModal}><h2>REVIEWS</h2></Link>
-                <Link to='/about' onClick={toggleModal}><h2>ABOUT</h2></Link>
                 <hr className='hrModal'/>
                 {loggedIn ? <Link to='/profile' onClick={toggleModal}><h2>ACCOUNT</h2></Link> : <Link to='/register'><div><h2>REGISTER</h2><h2>LOGIN</h2></div></Link>}
                 <Link to='/cart' onClick={toggleModal}><ul className='hamburgerMenuCart'><BsCart size={40}/></ul></Link>

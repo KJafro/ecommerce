@@ -105,10 +105,8 @@ const updatedArray = filter.map((review) => ({
     }
 
     const nums = ratings.map((item) => Number((item)))
-    console.log(nums)
     const sum = nums.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     const average = sum / nums.length;
-    console.log(average)
 
   return (
     <>

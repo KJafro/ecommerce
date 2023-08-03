@@ -142,7 +142,7 @@ export default function Rating() {
     {details.length == 0 ? <Spinner/> : <div className='ratingsContainer'>
     <Header/>
       <div className="ratingsTop">
-      <h3 style={{marginBottom: "20px"}}>{details.title}</h3>
+      <h3>{details.title}</h3>
       <img src={details.image} className='ratingsImage' alt="" />
       {!values.modal && <ReactStars value={average} edit={false} size={20} />}
         {actualRating == 0 ? "" : <div><p className='reviewsNumberRating'>Reviews: {actualRating.length}</p>

@@ -19,6 +19,7 @@ export default function Home() {
     const [filtered, setFiltered] = useState(store)
     const [searchin, setSearchin] = useState("")
     const [showBtn, setShowBtn] = useState(false)
+    const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
         .then(res => {
             setStore(res.data)
             setFiltered(res.data)
+            setLoading(false)
         })}
         ref()
     }, [])

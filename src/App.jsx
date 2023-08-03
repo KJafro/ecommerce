@@ -8,7 +8,6 @@ import SingleItemPage from './pages/SingleItemPage'
 import SingleOrderPage from './pages/SingleOrderPage'
 import Profile from './pages/Profile'
 import RecentOrders from './pages/RecentOrders'
-import About from './pages/About'
 import Rating from './pages/Rating'
 import Reviews from './pages/Reviews'
 import Review from './pages/Review'
@@ -27,7 +26,6 @@ function App() {
     <Route path="/cart" element={<Cart />} />
     <Route path="/profile" element={loggedIn ? <Profile/> : <Login/>} />
     <Route path="/orders" element={<RecentOrders />} />
-    <Route path="/about" element={<About />} />
     <Route path="/reviews" element={<Reviews />} />
     <Route path="/rating/:itemsId" element={<Rating />} />
     <Route path="/review/:itemsId" element={<Review />} />

@@ -18,7 +18,6 @@ export const HeaderProfile = () => {
         <li className='leftHeader'>
             <Link to='/'><ul>Products</ul></Link>
             <Link to='/orders'><ul>Recent Orders</ul></Link>
-            <Link to='/about'><ul>About</ul></Link>
         </li>
         <li className='rightHeader'>
         {!loggedIn ? <Link to='/login'><ul>Login</ul></Link> : <LoggedAs/>}

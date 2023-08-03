@@ -24,7 +24,6 @@ export const Header = () => {
             <Link to='/'><p>Products</p></Link>
             <Link to='/orders'><p>Orders</p></Link>
             <Link to='/reviews'><p>Reviews</p></Link>
-            <Link to='/about'><p>About</p></Link>
         </div>
         <div className='rightHeader'>
           {/* <input type="text" value={values.users} /> */}
