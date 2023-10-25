@@ -92,9 +92,9 @@
         flex: 1
     }
     .loginInput, .registerInput {
-        width: 95%;
+        width: 75%;
     }
     .loginRight form button, .registerRight form button {
-        width: 95%;
+        width: 75%;
     }
 }
